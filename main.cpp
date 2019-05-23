@@ -23,7 +23,7 @@ int main()
 	t2.INSERT(36);
 	t2.INSERT(53);
 	t2.INSERT(23);
-	t2.INSERT(636);
+	t2.INSERT(12);
 	t2.INSERT(66);
 	t2.REMOVE(6);
 	t2.HEIGHT();

@@ -13,8 +13,7 @@ class tree: public Container<R>
 			cout<<endl;
 			cout<<"DESTRUCTOR CALLED"<<endl;
 			cout<<"==================";
-			node<R>* b = this->root;
-			deleteTree(b);
+			deleteTree(this->root);
 			cout<<endl<<endl;
 		}
 		void INSERT(R k) {
