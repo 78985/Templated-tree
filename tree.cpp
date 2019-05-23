@@ -7,16 +7,15 @@ class tree: public Container<R>
 {
 	public:
 		tree(R k) {
-			node<R> a(k);
-			this->root=&a;	
+			this->root = new node<R>(k);	
 		}
 		~tree() {
 			cout<<endl;
 			cout<<"DESTRUCTOR CALLED"<<endl;
-			cout<<"=================="<<endl;
-			//node<R>* b = this->root;
-			//deleteTree(b); //для проверки работоспособности деструктора раскомментируйте эти две строчки. Если вдруг
-			// будет вылет, значит, я всё же ошибся. 
+			cout<<"==================";
+			node<R>* b = this->root;
+			deleteTree(b);
+			cout<<endl<<endl;
 		}
 		void INSERT(R k) {
 			node<R>* p=this->root;
@@ -57,7 +56,7 @@ class tree: public Container<R>
 				cout<<"ELEMENT"<<" "<<'"'<<k<<'"'<<" "<<"EXISTS IN THE TREE"<<endl;
 			else
 				cout<<"ELEMENT"<<" "<<'"'<<k<<'"'<<" "<<"DOES NOT EXIST IN THE TREE"<<endl;
-		}
+	 }
 	protected:
 		node<R>* root;
 };

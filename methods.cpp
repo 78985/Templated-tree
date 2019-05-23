@@ -8,7 +8,7 @@ struct node
 	unsigned char height;
 	node* left;
 	node* right;
-	node(R k) { key = k; left = right = 0; height = 1; }
+	node(R k) { key = k; left = NULL; right = NULL; height = 1; }
 };
 
 template <typename R>
@@ -138,7 +138,7 @@ void deleteTree(node<R>* a)
     deleteTree(a->left);  
     deleteTree(a->right);  
       
-    cout << "\n Deleting node1: " << a->key;  
+    cout << "\n Deleting node: " << a->key;  
     delete(a);
 }
 
